@@ -1,4 +1,3 @@
-from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic import DetailView, CreateView
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
@@ -8,5 +7,5 @@ from .forms import SignUpForm
 
 class UserRegisterView(generic.CreateView):
     form_class = SignUpForm
-    template_name = 'register.html'
+    template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
